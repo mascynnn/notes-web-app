@@ -7,6 +7,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $notes[] = $note;
 }
 
+
+class Notes
+{
+    private $notes = [];
+
+    public function addNote($note)
+    {
+        $this->notes[] = $note;
+    }
+
+    public function getNotes()
+    {
+        return $this->notes;
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
